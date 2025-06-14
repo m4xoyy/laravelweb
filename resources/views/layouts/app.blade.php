@@ -5,63 +5,96 @@
     <title>My Laravel App</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background: #f7f7f7;
-            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5); /* Gradient background */
+            padding: 40px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
         }
 
         h1 {
             color: #333;
+            margin-bottom: 20px;
+            text-align: center;
         }
 
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 30px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            border-radius: 8px;
-        }
-
-        a.button {
-            background-color: #4CAF50;
+        a.button, form button.button {
+            background: linear-gradient(to right, #00b09b, #96c93d);
             color: white;
-            padding: 10px 16px;
+            padding: 12px 24px;
             text-decoration: none;
-            border-radius: 5px;
-            margin-right: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
             display: inline-block;
+            transition: background 0.3s ease;
         }
 
-        a.button:hover {
-            background-color: #45a049;
+        a.button:hover, form button.button:hover {
+            background: linear-gradient(to right, #00a087, #85b832);
         }
 
         .edit-btn {
-            background-color: #007bff;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
         }
 
         .edit-btn:hover {
-            background-color: #0069d9;
+            background: linear-gradient(to right, #3e8ef7, #00e0e0);
         }
 
         .delete-btn {
-            background-color: #dc3545;
-            border: none;
+            background: linear-gradient(to right, #f85032, #e73827);
             color: white;
-            padding: 10px 16px;
+            padding: 10px 20px;
             border-radius: 5px;
+            border: none;
             cursor: pointer;
         }
 
         .delete-btn:hover {
-            background-color: #c82333;
+            background: linear-gradient(to right, #dd2c00, #b71c1c);
         }
 
         .success-message {
             color: green;
             margin-bottom: 20px;
             font-weight: bold;
+            text-align: center;
+        }
+
+        .error-message {
+            color: red;
+            margin-bottom: 12px;
+            font-weight: bold;
+        }
+
+        label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px 14px;
+            margin-bottom: 18px;
+            border: 1.5px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            height: 38px;
+            box-sizing: border-box;
         }
 
         ul {
@@ -71,7 +104,7 @@
 
         li.post-item {
             margin-bottom: 20px;
-            padding: 15px;
+            padding: 16px;
             border-bottom: 1px solid #eee;
         }
 
@@ -81,6 +114,10 @@
 
         form {
             display: inline;
+        }
+
+        .center {
+            text-align: center;
         }
     </style>
 </head>
